@@ -2,7 +2,8 @@
 Megaman: Super (Previously known as 30th Anniversary Mesen 16-bit HD Pack)
 
 =======Description=======
-	This HD pack aims to recreate Megaman 1's graphics in 16-bit. The driving idea behind this is a "What-if" scenario where Nintendo made the SNES not only backward compatible with the NES, but also created (and allowed third parties to create) special pass through cartridges that could reskin games. It's a crazy, out-there, parallel universe sort of idea, but it's pretty fun to think about.
+
+This HD pack aims to recreate Megaman 1's graphics in 16-bit. The driving idea behind this is a "What-if" scenario where Nintendo made the SNES not only backward compatible with the NES, but also created (and allowed third parties to create) special pass through cartridges that could reskin games. It's a crazy, out-there, parallel universe sort of idea, but it's pretty fun to think about.
 	
 The tiles in this pack are 99% based on the original NES designs rather than Wily Wars, however, the backgrounds mostly come from WW, albeit with some modifications and enhancements. 
 
