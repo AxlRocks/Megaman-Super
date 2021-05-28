@@ -1,5 +1,55 @@
-# Megaman-Super
 Megaman: Super (Previously known as 30th Anniversary Mesen 16-bit HD Pack)
+Author		:::		AxlRocks
+Version		:::		2.0
+Graphics	:::		Yes
+Audio		:::		Yes, Music (Optional)
+Game Region	:::		USA (HD Pack can be customized for Megaman or Rockman)
+Thanks		::: 	mkwong98
+						- For the original HDNES emulator and pack format
+						- For continuing work on Mesen concerning HD Packs
+					Sour
+						- For creating Mesen
+						- For supporting HD packs as well as building upon the format
+						- So much more
+					kya
+						- For the music patch
+					Zynk Oxhyde
+						- For the Roll-Chan series of hacks and letting me add Roll-Chan to this
+					ACC:Xess
+						- For the Bombman and Fireman remixes used in this pack
+					TwelveDust
+						- For the Iceman remix used in the music pack
+					CosmicGem
+						- For the Cutman and Fireman chiptune remixes
+					NES Game Fan
+						- For the trailer for Megaman: Super
+					feos
+						- For making overclocking a possiblity for NES emulation in the first place
+					Dan
+						- For creating Rock and Roll editor, used for some misc edits to levels and tilesets
+					Superjustinbros/Geno on MM8BDM Resources forum
+						- For easter egg materials
+					All who have contributed to Sprites Inc. and Spriter's Resource
+					VGMaps user Revned
+					Most of all, my girlfriend
+						- For who you are and everything you do that keeps me going
+					
+=======Changelog=======
+1.1 - Added game over screen tiles and applied a few other minor fixes.
+1.2 - Fixed the ending sunset/mountains/sky graphics to appear correctly regardless of which NES palette the player is using. Thanks to Zynk for pointing this out!
+1.3 - Made minor changes and fixes to the following enemies:
+	Fireman's fire attack and fire on his head
+	Changkey/Tackle Fire
+	Fire pillar and Fire Stick
+	Sniper Joe
+	Crazy Razy
+2.0 - Complete overhaul of the pack:
+	- All sheets fully organized and use proper filenames, makes any further updates or end-user mods MUCH easier
+	- Almost all graphics touched up and improved
+	- Backgrounds added to every stage, multi-layer parallax, menu backgrounds and more
+	- Customization options including different Megaman skins
+	- Music patch
+	- Navi Mode-esque text boxes, except with actually useful gameplay hints. This is optional - when you see an alert flash in the bottom left of the screen, press and hold Select to view a text box.
 
 =======Description=======
 	This HD pack aims to recreate Megaman 1's graphics in 16-bit. The driving idea behind this is a "What-if" scenario where Nintendo made the SNES not only backward compatible with the NES, but also created (and allowed third parties to create) special pass through cartridges that could reskin games. It's a crazy, out-there, parallel universe sort of idea, but it's pretty fun to think about.
@@ -37,36 +87,5 @@ Megaman: Super (Previously known as 30th Anniversary Mesen 16-bit HD Pack)
 		You can also change out music if you edit the hires.txt file manually. Included in the pack are two remixes and also included is a txt file with the necessary loop points to paste into hires.txt.
 	=======Pause=======
 		By default, Megaman: Super removes Pause functionality to free up the use of holding down the Select button to display text boxes in-game. This is simply for consistency with how the rest of the series would handle these text boxes. You can use the "Pause Intact" patches and hires.txt files to restore the pause functionality. You'll still be able to view text boxes, but they will toggle on and off with Select rather than holding it down.
-		
-=======Thanks=======
-					mkwong98
-						- For the original HDNES emulator and pack format
-						- For continuing work on Mesen concerning HD Packs
-					Sour
-						- For creating Mesen
-						- For supporting HD packs as well as building upon the format
-						- So much more
-					kya
-						- For the music patch
-					Zynk Oxhyde
-						- For the Roll-Chan series of hacks and letting me add Roll-Chan to this
-					ACC:Xess
-						- For the Bombman and Fireman remixes used in this pack
-					TwelveDust
-						- For the Iceman remix used in the music pack
-					CosmicGem
-						- For the Cutman and Fireman chiptune remixes
-					NES Game Fan
-						- For the trailer for Megaman: Super
-					feos
-						- For making overclocking a possiblity for NES emulation in the first place
-					Dan
-						- For creating Rock and Roll editor, used for some misc edits to levels and tilesets
-					Superjustinbros/Geno on MM8BDM Resources forum
-						- For easter egg materials
-					All who have contributed to Sprites Inc. and Spriter's Resource
-					VGMaps user Revned
-					Most of all, my girlfriend
-						- For who you are and everything you do that keeps me going
 		
 Enjoy!
