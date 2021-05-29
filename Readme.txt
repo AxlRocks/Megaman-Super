@@ -88,4 +88,12 @@ Thanks		::: 	mkwong98
 	=======Pause=======
 		By default, Megaman: Super removes Pause functionality to free up the use of holding down the Select button to display text boxes in-game. This is simply for consistency with how the rest of the series would handle these text boxes. You can use the "Pause Intact" patches and hires.txt files to restore the pause functionality. You'll still be able to view text boxes, but they will toggle on and off with Select rather than holding it down.
 		
+		Use this order when customizing:
+		1. Skins
+		2a. Points
+		2b. Energy Capsules
+		2c. Title and Select Screen
+		2d. Any further customization
+		3. any Further Customization options
+		
 Enjoy!

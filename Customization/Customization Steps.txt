@@ -1,0 +1,12 @@
+Skins should be applied first, then you can apply any combination of points, energy capsules, and title and select screens, then any further customization options.
+ 
+This is because all skins contain copies of those elements so that when switching back from Roll to a Megaman skin, you'll have the correct title and select screen rather than the Roll-chan versions.
+
+So:
+
+1. Skins
+2a. Points
+2b. Energy Capsules
+2c. Title and Select Screen
+2d. Any further customization
+3. any Further Customization options
