@@ -114,7 +114,7 @@
 <img>Cutscenes\Ending_BG_11PM.png
 #}
 
-#{#=======Level Backdrop Conditions=======#
+#{#=======Conditions=======#
 <condition>InStage,memoryCheckConstant,01FF,!=,90
 <condition>CutmanStage,memoryCheckConstant,0031,==,00
 <condition>IcemanStage,memoryCheckConstant,0031,==,01
@@ -126,6 +126,66 @@
 <condition>WilyStage02,memoryCheckConstant,0031,==,07
 <condition>WilyStage03,memoryCheckConstant,0031,==,08
 <condition>WilyStage04,memoryCheckConstant,0031,==,09
+
+###Menu Backdrop Conditions - Title, Select, Selected, and Game Over Screen Checks
+<condition>TitleMenu,tileAtPosition,80,56,0000010307001F0000010204081F207F,0F152006
+<condition>TitleMenuPaletteChecker,tileAtPosition,88,136,FFFFFFFFFFFFFFFFFF03393939033F3F,0F0F0F0F
+#Blue, Pink
+<condition>SelectMenu01,tileAtPosition,72,24,FFFFFCF7EFFCD8D8FFFFFFF8F0E3E7E7,0F3C2111
+<condition>SelectMenu02,tileAtPosition,72,24,FFFFFCF7EFFCD8D8FFFFFFF8F0E3E7E7,0F303511
+
+<condition>SelectMenu03,tileAtPosition,136,152,FFFFFCF7EFFCD8D8FFFFFFF8F0E3E7E7,0F3C2111
+<condition>SelectMenu04,tileAtPosition,120,120,00000080C0010101777773310000FC00,0F283037
+
+<condition>SelectedMenuAnim00,frameRange,24,20
+<condition>SelectedMenuAnim01,frameRange,24,16
+<condition>SelectedMenuAnim02,frameRange,24,12
+<condition>SelectedMenuAnim03,frameRange,24,8
+<condition>SelectedMenuAnim04,frameRange,24,4
+<condition>SelectedMenuAnim05,frameRange,24,0
+
+#Upper Light Blue
+<condition>SelectedMenu01,tileAtPosition,0,80,FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,0F30300C
+#Middle Dark Blue
+<condition>SelectedMenu02,tileAtPosition,248,136,FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,0F30300C
+#White Flashing
+<condition>SelectedMenu03,tileAtPosition,248,136,FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,0F202020
+
+<condition>SelectedMenuWily01,tileAtPosition,0,80,FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,0F0C0C0C
+<condition>SelectedMenuWily02,tileAtPosition,248,136,FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,0F0C0C0C
+
+<condition>GameOverMenu01,tileAtPosition,96,72,FFFFFFFFFFFFFFFFFF83393F21393983,0F200F11
+<condition>GameOverMenu02,tileAtPosition,160,72,FFFFFFFFFFFFFFFFFF03393939033339,0F200F11
+
+#{Robot Masters Portraits Alive or Defeated
+<condition>CutmanAlive,tileAtPosition,80,32,FFFFFFFFFFFFFFFF0000000000000000,0F280F0F
+<condition>CutmanDefeated,tileAtPosition,80,32,00000000000000000000000000000000,0F283037
+
+<condition>GutsmanAlive,tileAtPosition,144,32,FFFFFFFFFFFFF0E0000000000000000E,0F281527
+<condition>GutsmanDefeated,tileAtPosition,144,32,FFFFFFFFFFFFF0E0000000000000000E,0F0F1527
+
+<condition>IcemanAlive,tileAtPosition,176,96,FFFFFFFFFFFFFFFF0000000000000000,0F280F0F
+<condition>IcemanDefeated,tileAtPosition,176,96,00000000000000000000000000000000,0F283037
+
+<condition>BombmanAlive,tileAtPosition,144,160,FFFFFFFFFFFFFFFF0000000000000000,0F280F0F
+<condition>BombmanDefeated,tileAtPosition,144,160,00000000000000000000000000000000,0F283037
+
+<condition>FiremanAlive,tileAtPosition,80,160,FFFFFFFFFFFFFFFF0000000000000000,0F280F0F
+<condition>FiremanDefeated,tileAtPosition,80,160,00000000000000000000000000000000,0F283037
+
+<condition>ElecmanAlive,tileAtPosition,48,96,FFFFFFFFFFFFFFFF0000000000000000,0F280F0F
+<condition>ElecmanDefeated,tileAtPosition,48,96,00000000000000000000000000000000,0F283037
+#}
+
+#{Stage Select Text Selected
+<condition>CutmanTextSelected,tileAtPosition,72,72,FFFFFFFFFFFFFFFFFF83393F3F3F3983,0F303511
+<condition>GutsmanTextSelected,tileAtPosition,136,72,FFFFFFFFFFFFFFFFFF83393F21393983,0F303511
+<condition>IcemanTextSelected,tileAtPosition,168,136,FFFFFFFFFFFFFFFFFFCFCFCFCFCFCFCF,0F303511
+<condition>BombmanTextSelected,tileAtPosition,136,200,FFFFFFFFFFFFFFFFFF03393903393903,0F303511
+<condition>FiremanTextSelected,tileAtPosition,72,200,FFFFFFFFFFFFFFFFFF013F3F033F3F3F,0F303511
+<condition>ElecmanTextSelected,tileAtPosition,40,136,FFFFFFFFFFFFFFFFFF013F3F033F3F01,0F303511
+<condition>WilyTextSelected,tileAtPosition,104,136,FFFFFFFFFFFFFFFFFF03393939393903,0F303511
+#}
 
 #{Bombman Screen Checkers
 <condition>BombmanScreenChecker06,memoryCheckConstant,001B,<=,06
@@ -281,52 +341,55 @@
 <condition>WilyMachineDestroyedBGAnimFrame01,frameRange,30,00
 
 #}
+#}
+
+#{#=======Level Backdrops=======#
 
 #{Bombman Backdrops
-[InStage&BombmanStage&BombmanScreenChecker06]<background>Backdrops\Backdrop_Bombman_00_00.png,1,0.5,0,00,0,272
+[InStage&BombmanStage&BombmanScreenChecker06&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Bombman_00_00.png,1,0.5,0,00,0,272
 [InStage&BombmanStage&BombmanScreenChecker07]<background>Backdrops\Backdrop_Bombman_00_00.png,1,0.5,0,00,128,256
-[InStage&BombmanStage&BombmanScreenChecker0D]<background>Backdrops\Backdrop_Bombman_00_00.png,1,0.5,0,00,0,240
+[InStage&BombmanStage&BombmanScreenChecker0D&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Bombman_00_00.png,1,0.5,0,00,0,240
 [InStage&BombmanStage&BombmanScreenChecker0E]<background>Backdrops\Backdrop_Bombman_00_00.png,1,0.5,0,00,128,224
-[InStage&BombmanStage&BombmanScreenChecker13]<background>Backdrops\Backdrop_Bombman_00_00.png,1,0.5,0,00,0,208
+[InStage&BombmanStage&BombmanScreenChecker13&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Bombman_00_00.png,1,0.5,0,00,0,208
 
-[InStage&BombmanStage&BombmanScreenChecker06]<background>Backdrops\Backdrop_Bombman_01_00.png,1,0.75,0,01,0,272
+[InStage&BombmanStage&BombmanScreenChecker06&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Bombman_01_00.png,1,0.75,0,01,0,272
 [InStage&BombmanStage&BombmanScreenChecker07]<background>Backdrops\Backdrop_Bombman_01_00.png,1,0.75,0,01,64,256
-[InStage&BombmanStage&BombmanScreenChecker0D]<background>Backdrops\Backdrop_Bombman_01_00.png,1,0.75,0,01,0,240
+[InStage&BombmanStage&BombmanScreenChecker0D&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Bombman_01_00.png,1,0.75,0,01,0,240
 [InStage&BombmanStage&BombmanScreenChecker0E]<background>Backdrops\Backdrop_Bombman_01_00.png,1,0.75,0,01,64,224
-[InStage&BombmanStage&BombmanScreenChecker13]<background>Backdrops\Backdrop_Bombman_01_00.png,1,0.75,0,01,0,208
+[InStage&BombmanStage&BombmanScreenChecker13&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Bombman_01_00.png,1,0.75,0,01,0,208
 #}
 
 #{Cutman Backdrops
-[InStage&CutmanStage&CutmanScreenChecker03]<background>Backdrops\Backdrop_Cutman_00_00.png,1,0.5,0,00,0,272
+[InStage&CutmanStage&CutmanScreenChecker03&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Cutman_00_00.png,1,0.5,0,00,0,272
 [InStage&CutmanStage&CutmanScreenChecker04]<background>Backdrops\Backdrop_Cutman_00_00.png,1,1,0,00,128,264
 [InStage&CutmanStage&CutmanScreenChecker05]<background>Backdrops\Backdrop_Cutman_00_00.png,1,1,0,00,128,256
 [InStage&CutmanStage&CutmanScreenChecker06]<background>Backdrops\Backdrop_Cutman_00_00.png,1,1,0,00,128,248
-[InStage&CutmanStage&CutmanScreenChecker09]<background>Backdrops\Backdrop_Cutman_00_00.png,1,0.5,0,00,0,240
+[InStage&CutmanStage&CutmanScreenChecker09&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Cutman_00_00.png,1,0.5,0,00,0,240
 [InStage&CutmanStage&CutmanScreenChecker0A]<background>Backdrops\Backdrop_Cutman_00_00.png,1,1,0,00,128,232
 [InStage&CutmanStage&CutmanScreenChecker0B]<background>Backdrops\Backdrop_Cutman_00_00.png,1,1,0,00,128,224
 [InStage&CutmanStage&CutmanScreenChecker0C]<background>Backdrops\Backdrop_Cutman_00_00.png,1,1,0,00,128,216
-[InStage&CutmanStage&CutmanScreenChecker0F]<background>Backdrops\Backdrop_Cutman_00_00.png,1,0.5,0,00,0,208
+[InStage&CutmanStage&CutmanScreenChecker0F&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Cutman_00_00.png,1,0.5,0,00,0,208
 [InStage&CutmanStage&CutmanScreenChecker10]<background>Backdrops\Backdrop_Cutman_00_00.png,1,1,0,00,128,216
 [InStage&CutmanStage&CutmanScreenChecker11]<background>Backdrops\Backdrop_Cutman_00_00.png,1,1,0,00,128,240
-[InStage&CutmanStage&CutmanScreenChecker13]<background>Backdrops\Backdrop_Cutman_00_00.png,1,0.5,0,00,128,256
+[InStage&CutmanStage&CutmanScreenChecker13&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Cutman_00_00.png,1,0.5,0,00,128,256
 
 #Layer 30
-[InStage&CutmanStage&CutmanScreenChecker03]<background>Backdrops\Backdrop_Cutman_30_00.png,1,1.5,0,30,0,272
+[InStage&CutmanStage&CutmanScreenChecker03&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Cutman_30_00.png,1,1.5,0,30,0,272
 [InStage&CutmanStage&CutmanScreenChecker04]<background>Backdrops\Backdrop_Cutman_30_00.png,1,1,0,30,128,256
 [InStage&CutmanStage&CutmanScreenChecker05]<background>Backdrops\Backdrop_Cutman_30_00.png,1,1,0,30,128,240
 [InStage&CutmanStage&CutmanScreenChecker06]<background>Backdrops\Backdrop_Cutman_30_00.png,1,1,0,30,128,224
-[InStage&CutmanStage&CutmanScreenChecker09]<background>Backdrops\Backdrop_Cutman_30_00.png,1,1,0,30,128,208
+[InStage&CutmanStage&CutmanScreenChecker09&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Cutman_30_00.png,1,1,0,30,128,208
 [InStage&CutmanStage&CutmanScreenChecker0A]<background>Backdrops\Backdrop_Cutman_30_00.png,1,1,0,30,128,186
-[InStage&CutmanStage&CutmanScreenChecker0F]<background>Backdrops\Backdrop_Cutman_30_00.png,1,1,0,30,128,0
+[InStage&CutmanStage&CutmanScreenChecker0F&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Cutman_30_00.png,1,1,0,30,128,0
 [InStage&CutmanStage&CutmanScreenChecker10]<background>Backdrops\Backdrop_Cutman_30_00.png,1,1,0,30,128,208
 [InStage&CutmanStage&CutmanScreenChecker11]<background>Backdrops\Backdrop_Cutman_30_00.png,1,1,0,30,128,240
-[InStage&CutmanStage&CutmanScreenChecker13]<background>Backdrops\Backdrop_Cutman_30_00.png,1,1,0,30,128,272
+[InStage&CutmanStage&CutmanScreenChecker13&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Cutman_30_00.png,1,1,0,30,128,272
 #}
 
 #{Elecman Backdrops
-[InStage&ElecmanStage&ElecmanScreenChecker05]<background>Backdrops\Backdrop_Elecman_00_00.png,1,1,0,00,0,447
+[InStage&ElecmanStage&ElecmanScreenChecker05&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Elecman_00_00.png,1,1,0,00,0,447
 [InStage&ElecmanStage&ElecmanScreenChecker06]<background>Backdrops\Backdrop_Elecman_00_00.png,1,1,0,00,128,440
-[InStage&ElecmanStage&ElecmanScreenChecker08]<background>Backdrops\Backdrop_Elecman_00_00.png,1,0.5,0,00,0,408
+[InStage&ElecmanStage&ElecmanScreenChecker08&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Elecman_00_00.png,1,0.5,0,00,0,408
 [InStage&ElecmanStage&ElecmanScreenChecker09]<background>Backdrops\Backdrop_Elecman_00_00.png,1,1,0,00,0,376
 [InStage&ElecmanStage&ElecmanScreenChecker0A]<background>Backdrops\Backdrop_Elecman_00_00.png,1,1,0,00,0,344
 [InStage&ElecmanStage&ElecmanScreenChecker0B]<background>Backdrops\Backdrop_Elecman_00_00.png,1,1,0,00,0,312
@@ -334,63 +397,63 @@
 [InStage&ElecmanStage&ElecmanScreenChecker0D]<background>Backdrops\Backdrop_Elecman_00_00.png,1,1,0,00,0,248
 [InStage&ElecmanStage&ElecmanScreenChecker0E]<background>Backdrops\Backdrop_Elecman_00_00.png,1,1,0,00,0,216
 [InStage&ElecmanStage&ElecmanScreenChecker0F]<background>Backdrops\Backdrop_Elecman_00_00.png,1,1,0,00,0,184
-[InStage&ElecmanStage&ElecmanScreenChecker11]<background>Backdrops\Backdrop_Elecman_00_00.png,1,0.5,0,00,0,152
+[InStage&ElecmanStage&ElecmanScreenChecker11&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Elecman_00_00.png,1,0.5,0,00,0,152
 [InStage&ElecmanStage&ElecmanScreenChecker12]<background>Backdrops\Backdrop_Elecman_00_00.png,1,1,0,00,128,120
 [InStage&ElecmanStage&ElecmanScreenChecker13]<background>Backdrops\Backdrop_Elecman_00_00.png,1,1,0,00,128,88
 #}
 
 #{Fireman Backdrops
-[InStage&FiremanStage&FiremanScreenChecker02&FiremanPaletteChecker03]<background>Backdrops\Backdrop_Fireman_00_00_Palette_01.png,1,0.5,0,00,0,272
-[InStage&FiremanStage&FiremanScreenChecker02&FiremanPaletteChecker02]<background>Backdrops\Backdrop_Fireman_00_00_Palette_00.png,1,0.5,0,00,0,272
-[InStage&FiremanStage&FiremanScreenChecker02]<background>Backdrops\Backdrop_Fireman_00_00.png,1,0.5,0,00,0,272
+[InStage&FiremanStage&FiremanScreenChecker02&FiremanPaletteChecker03&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Fireman_00_00_Palette_01.png,1,0.5,0,00,0,272
+[InStage&FiremanStage&FiremanScreenChecker02&FiremanPaletteChecker02&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Fireman_00_00_Palette_00.png,1,0.5,0,00,0,272
+[InStage&FiremanStage&FiremanScreenChecker02&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Fireman_00_00.png,1,0.5,0,00,0,272
 
 [InStage&FiremanStage&FiremanScreenChecker03&FiremanPaletteChecker03]<background>Backdrops\Backdrop_Fireman_00_03_Palette_01.png,1,1,0,00,256,272
 [InStage&FiremanStage&FiremanScreenChecker03&FiremanPaletteChecker02]<background>Backdrops\Backdrop_Fireman_00_03_Palette_00.png,1,1,0,00,256,272
 [InStage&FiremanStage&FiremanScreenChecker03]<background>Backdrops\Backdrop_Fireman_00_03.png,1,1,0,00,256,272
 
-[InStage&FiremanStage&FiremanScreenChecker06&FiremanPaletteChecker03]<background>Backdrops\Backdrop_Fireman_00_06_Palette_01.png,1,0.5,0,00,0,272
-[InStage&FiremanStage&FiremanScreenChecker06&FiremanPaletteChecker02]<background>Backdrops\Backdrop_Fireman_00_06_Palette_00.png,1,0.5,0,00,0,272
-[InStage&FiremanStage&FiremanScreenChecker06]<background>Backdrops\Backdrop_Fireman_00_06.png,1,0.5,0,00,0,272
+[InStage&FiremanStage&FiremanScreenChecker06&FiremanPaletteChecker03&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Fireman_00_06_Palette_01.png,1,0.5,0,00,0,272
+[InStage&FiremanStage&FiremanScreenChecker06&FiremanPaletteChecker02&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Fireman_00_06_Palette_00.png,1,0.5,0,00,0,272
+[InStage&FiremanStage&FiremanScreenChecker06&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Fireman_00_06.png,1,0.5,0,00,0,272
 
 [InStage&FiremanStage&FiremanScreenChecker07&FiremanPaletteChecker03]<background>Backdrops\Backdrop_Fireman_00_03_Palette_01.png,1,1,0,00,256,272
 [InStage&FiremanStage&FiremanScreenChecker07&FiremanPaletteChecker02]<background>Backdrops\Backdrop_Fireman_00_03_Palette_00.png,1,1,0,00,256,272
 [InStage&FiremanStage&FiremanScreenChecker07]<background>Backdrops\Backdrop_Fireman_00_03.png,1,1,0,00,256,272
 
-[InStage&FiremanStage&FiremanScreenChecker0A&FiremanPaletteChecker03]<background>Backdrops\Backdrop_Fireman_00_00_Palette_01.png,1,0.5,0,00,0,272
-[InStage&FiremanStage&FiremanScreenChecker0A&FiremanPaletteChecker02]<background>Backdrops\Backdrop_Fireman_00_00_Palette_00.png,1,0.5,0,00,0,272
-[InStage&FiremanStage&FiremanScreenChecker0A]<background>Backdrops\Backdrop_Fireman_00_00.png,1,0.5,0,00,0,272
+[InStage&FiremanStage&FiremanScreenChecker0A&FiremanPaletteChecker03&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Fireman_00_00_Palette_01.png,1,0.5,0,00,0,272
+[InStage&FiremanStage&FiremanScreenChecker0A&FiremanPaletteChecker02&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Fireman_00_00_Palette_00.png,1,0.5,0,00,0,272
+[InStage&FiremanStage&FiremanScreenChecker0A&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Fireman_00_00.png,1,0.5,0,00,0,272
 
 [InStage&FiremanStage&FiremanScreenChecker0B&FiremanPaletteChecker03]<background>Backdrops\Backdrop_Fireman_00_00_Palette_01.png,1,1,0,00,256,272
 [InStage&FiremanStage&FiremanScreenChecker0B&FiremanPaletteChecker02]<background>Backdrops\Backdrop_Fireman_00_00_Palette_00.png,1,1,0,00,256,272
 [InStage&FiremanStage&FiremanScreenChecker0B]<background>Backdrops\Backdrop_Fireman_00_00.png,1,1,0,00,256,272
 
-[InStage&FiremanStage&FiremanScreenChecker0F&FiremanPaletteChecker03]<background>Backdrops\Backdrop_Fireman_00_00_Palette_01.png,1,0.5,0,00,0,272
-[InStage&FiremanStage&FiremanScreenChecker0F&FiremanPaletteChecker02]<background>Backdrops\Backdrop_Fireman_00_00_Palette_00.png,1,0.5,0,00,0,272
-[InStage&FiremanStage&FiremanScreenChecker0F]<background>Backdrops\Backdrop_Fireman_00_00.png,1,0.5,0,00,0,272
+[InStage&FiremanStage&FiremanScreenChecker0F&FiremanPaletteChecker03&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Fireman_00_00_Palette_01.png,1,0.5,0,00,0,272
+[InStage&FiremanStage&FiremanScreenChecker0F&FiremanPaletteChecker02&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Fireman_00_00_Palette_00.png,1,0.5,0,00,0,272
+[InStage&FiremanStage&FiremanScreenChecker0F&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Fireman_00_00.png,1,0.5,0,00,0,272
 #}
 
 #{Gutsman Backdrops
-[InStage&GutsmanStage&GutsmanScreenChecker09]<background>Backdrops\Backdrop_Gutsman_00_00.png,1,0.5,0,00,0,0
+[InStage&GutsmanStage&GutsmanScreenChecker09&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Gutsman_00_00.png,1,0.5,0,00,0,0
 [InStage&GutsmanStage&GutsmanScreenChecker0A]<background>Backdrops\Backdrop_Gutsman_00_00.png,1,0,0,00,128,0
 [InStage&GutsmanStage&GutsmanScreenChecker0B]<background>Backdrops\Backdrop_Gutsman_00_00.png,1,0,0,00,128,0
 [InStage&GutsmanStage&GutsmanScreenChecker0C]<background>Backdrops\Backdrop_Gutsman_00_00.png,1,0,0,00,128,0
-[InStage&GutsmanStage&GutsmanScreenChecker0E]<background>Backdrops\Backdrop_Gutsman_00_00.png,1,0.5,0,00,0,0
+[InStage&GutsmanStage&GutsmanScreenChecker0E&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Gutsman_00_00.png,1,0.5,0,00,0,0
 #}
 
 #{Iceman Backdrops
-[InStage&IcemanStage]<background>Backdrops\Backdrop_Iceman_00_00.png,1,0.5,0,00,0,0
-[InStage&IcemanStage]<background>Backdrops\Backdrop_Iceman_01_00.png,1,0.75,0,01,0,0
-[InStage&IcemanStage&IcemanScreenChecker00]<background>Backdrops\Backdrop_Iceman_02_00.png,1,1,0,02,0,0
-[InStage&IcemanStage&IcemanScreenChecker01&IcemanScreenPosChecker00]<background>Backdrops\Backdrop_Iceman_02_00.png,1,1,0,02,0,0
+[InStage&IcemanStage&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03&!SelectedMenu01&!SelectedMenu02]<background>Backdrops\Backdrop_Iceman_00_00.png,1,0.5,0,00,0,0
+[InStage&IcemanStage&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Iceman_01_00.png,1,0.75,0,01,0,0
+[InStage&IcemanStage&IcemanScreenChecker00&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Iceman_02_00.png,1,1,0,02,0,0
+[InStage&IcemanStage&IcemanScreenChecker01&IcemanScreenPosChecker00&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Iceman_02_00.png,1,1,0,02,0,0
 [InStage&IcemanStage&IcemanScreenChecker0A]<background>Backdrops\Backdrop_Iceman_02_0A.png,1,0,1,02,0,0
 [InStage&IcemanStage&IcemanScreenChecker0B&IcemanScreenPosChecker01]<background>Backdrops\Backdrop_Iceman_02_0A.png,1,1,1,02,0,0
 
-Iceman Layer 30
-[InStage&IcemanStage&IcemanScreenChecker00]<background>Backdrops\Backdrop_Iceman_30_00.png,1,1,0,30,0,0
-[InStage&IcemanStage&IcemanScreenChecker01&IcemanScreenPosChecker00]<background>Backdrops\Backdrop_Iceman_30_00.png,1,1,0,30,0,0
+#Iceman Layer 30
+[InStage&IcemanStage&IcemanScreenChecker00&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Iceman_30_00.png,1,1,0,30,0,0
+[InStage&IcemanStage&IcemanScreenChecker01&IcemanScreenPosChecker00&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Iceman_30_00.png,1,1,0,30,0,0
 [InStage&IcemanStage&IcemanScreenChecker03]<background>Backdrops\Backdrop_Iceman_30_03.png,1,1,0,30,0,0
-[InStage&IcemanStage&IcemanScreenChecker04&IcemanScreenChecker05]<background>Backdrops\Backdrop_Iceman_30_04.png,1,1,0,30,0,0
-[InStage&IcemanStage&IcemanScreenChecker06&IcemanScreenChecker07]<background>Backdrops\Backdrop_Iceman_30_04.png,1,1,0,30,512,0
+[InStage&IcemanStage&IcemanScreenChecker04&IcemanScreenChecker05&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Iceman_30_04.png,1,1,0,30,0,0
+[InStage&IcemanStage&IcemanScreenChecker06&IcemanScreenChecker07&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Iceman_30_04.png,1,1,0,30,512,0
 [InStage&IcemanStage&IcemanScreenChecker0A]<background>Backdrops\Backdrop_Iceman_30_0A.png,1,0,1,30,0,0
 [InStage&IcemanStage&IcemanScreenChecker0B&IcemanScreenPosChecker01]<background>Backdrops\Backdrop_Iceman_30_0A.png,1,1,1,30,0,0
 
@@ -403,13 +466,13 @@ Iceman Layer 30
 #}
 
 #{Wily 01 Backdrops
-[InStage&WilyStage01&Wily01ScreenChecker1C]<background>Backdrops\Backdrop_Wily_01_00_1D.png,1,0.5,0,00,0,0
+[InStage&WilyStage01&Wily01ScreenChecker1C&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Wily_01_00_1D.png,1,0.5,0,00,0,0
 [InStage&WilyStage01&Wily01ScreenChecker1D&Wily01ScreenPosChecker01]<background>Backdrops\Backdrop_Wily_01_00_1D.png,1,0.5,0,00,0,0
 [InStage&WilyStage01&Wily01ScreenChecker1D&Wily01ScreenPosChecker02]<background>Backdrops\Backdrop_Wily_01_02_1D.png,1,0.5,0,02,0,0
 [InStage&WilyStage01&Wily01ScreenChecker1E]<background>Backdrops\Backdrop_Wily_01_00_1E.png,1,0.5,0,02,0,0
 [InStage&WilyStage01&Wily01ScreenChecker26]<background>Backdrops\Backdrop_Wily_01_00_1E.png,1,1,0,00,0,0
 
-[InStage&WilyStage01&Wily01ScreenChecker1C]<background>Backdrops\Backdrop_Wily_01_01_1D.png,1,0.75,0,01,0,0
+[InStage&WilyStage01&Wily01ScreenChecker1C&!SelectMenu01&!SelectMenu02&!SelectMenu03&!SelectMenu04&!SelectedMenu01&!SelectedMenu02&!SelectedMenu03]<background>Backdrops\Backdrop_Wily_01_01_1D.png,1,0.75,0,01,0,0
 [InStage&WilyStage01&Wily01ScreenChecker1D&Wily01ScreenPosChecker01]<background>Backdrops\Backdrop_Wily_01_01_1D.png,1,0.75,0,01,0,0
 
 #Boss_Yellow_Devil_Unique_Meter
@@ -500,67 +563,98 @@ Iceman Layer 30
 #}
 
 #{#=======Menu Backdrop Conditions=======#
-###Conditions - Title, Select, Selected, and Game Over Screen Checks
-<condition>TitleMenu,tileAtPosition,80,56,0000010307001F0000010204081F207F,0F152006
-<condition>TitleMenuPaletteChecker,tileAtPosition,88,136,FFFFFFFFFFFFFFFFFF03393939033F3F,0F0F0F0F
-###Blue, Pink
-<condition>SelectMenu01,tileAtPosition,72,24,FFFFFCF7EFFCD8D8FFFFFFF8F0E3E7E7,0F3C2111
-<condition>SelectMenu02,tileAtPosition,72,24,FFFFFCF7EFFCD8D8FFFFFFF8F0E3E7E7,0F303511
-<condition>SelectMenu03,tileAtPosition,136,152,FFFFFCF7EFFCD8D8FFFFFFF8F0E3E7E7,0F3C2111
-<condition>SelectMenu04,tileAtPosition,120,120,00000080C0010101777773310000FC00,0F283037
 
-<condition>SelectedMenuAnim00,frameRange,24,20
-<condition>SelectedMenuAnim01,frameRange,24,16
-<condition>SelectedMenuAnim02,frameRange,24,12
-<condition>SelectedMenuAnim03,frameRange,24,8
-<condition>SelectedMenuAnim04,frameRange,24,4
-<condition>SelectedMenuAnim05,frameRange,24,0
-
-<condition>SelectedMenu01,tileAtPosition,0,80,FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,0F30300C
-<condition>SelectedMenu02,tileAtPosition,248,136,FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,0F30300C
-
-<condition>SelectedMenuWily01,tileAtPosition,0,80,FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,0F0C0C0C
-<condition>SelectedMenuWily02,tileAtPosition,248,136,FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,0F0C0C0C
-
-<condition>GameOverMenu01,tileAtPosition,96,72,FFFFFFFFFFFFFFFFFF83393F21393983,0F200F11
-<condition>GameOverMenu02,tileAtPosition,160,72,FFFFFFFFFFFFFFFFFF03393939033339,0F200F11
-
-###Menu Backdrops
-###Title
+#{Title
 [TitleMenu]<background>MenuBackdrops\Menu_Title_00.png,1,0,0,00,0,0
 [TitleMenu]<background>MenuBackdrops\Menu_Title_01.png,1,0,0,01,0,0
 [TitleMenu]<background>MenuBackdrops\Menu_Title_02.png,1,0,0,02,0,0
 [TitleMenu]<background>MenuBackdrops\Menu_Title_03.png,1,0,0,03,0,0
 [TitleMenu&TitleMenuPaletteChecker]<background>MenuBackdrops\Menu_Title_04_Palette_Shift.png,1,0,0,04,0,0
 [TitleMenu]<background>MenuBackdrops\Menu_Title_04.png,1,0,0,04,0,0
+#}
 
-###Stage Select
+#{Stage Select
 [SelectMenu01]<background>MenuBackdrops\Menu_Stage_Select_00.png,1,0,0,00,0,0
 [SelectMenu02]<background>MenuBackdrops\Menu_Stage_Select_00.png,1,0,0,00,0,0
 [SelectedMenu01&SelectedMenu02]<background>MenuBackdrops\Menu_Stage_Select_00.png,1,0,0,00,0,0
-[SelectedMenu01&SelectedMenu02&SelectedMenuAnim00]<background>MenuBackdrops\Menu_Stage_Selected_01_Frame00.png,1,0,0,01,0,0
-[SelectedMenu01&SelectedMenu02&SelectedMenuAnim01]<background>MenuBackdrops\Menu_Stage_Selected_01_Frame01.png,1,0,0,01,0,0
-[SelectedMenu01&SelectedMenu02&SelectedMenuAnim02]<background>MenuBackdrops\Menu_Stage_Selected_01_Frame02.png,1,0,0,01,0,0
-[SelectedMenu01&SelectedMenu02&SelectedMenuAnim03]<background>MenuBackdrops\Menu_Stage_Selected_01_Frame03.png,1,0,0,01,0,0
-[SelectedMenu01&SelectedMenu02&SelectedMenuAnim04]<background>MenuBackdrops\Menu_Stage_Selected_01_Frame04.png,1,0,0,01,0,0
-[SelectedMenu01&SelectedMenu02&SelectedMenuAnim05]<background>MenuBackdrops\Menu_Stage_Selected_01_Frame05.png,1,0,0,01,0,0
+#}
 
-###Stage Select Megaman Look Around
+#{Stage Select Megaman Look Around
 [SelectMenu03&!SelectMenu04&CutmanStage]<background>MenuBackdrops\Menu_Stage_Select_Megaman_LU_31.png,1,0,0,31,0,0
 [SelectMenu03&!SelectMenu04&ElecmanStage]<background>MenuBackdrops\Menu_Stage_Select_Megaman_L_31.png,1,0,0,31,0,0
 [SelectMenu01&!SelectMenu04&FiremanStage]<background>MenuBackdrops\Menu_Stage_Select_Megaman_LD_31.png,1,0,0,31,0,0
 [SelectMenu03&!SelectMenu04&GutsmanStage]<background>MenuBackdrops\Menu_Stage_Select_Megaman_RU_31.png,1,0,0,31,0,0
 [SelectMenu01&!SelectMenu04&IcemanStage]<background>MenuBackdrops\Menu_Stage_Select_Megaman_R_31.png,1,0,0,31,0,0
 [SelectMenu01&!SelectMenu04&BombmanStage]<background>MenuBackdrops\Menu_Stage_Select_Megaman_RD_31.png,1,0,0,31,0,0
+#}
 
-###Stage Select Robot Master Portraits
+#{Stage Select Robot Master Portraits
 [SelectMenu01&!SelectMenu04]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portraits_32.png,1,0,0,32,0,0
 [SelectMenu02&!SelectMenu04]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portraits_32.png,1,0,0,32,0,0
 [SelectMenu01&SelectMenu04]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portraits_Wily_32.png,1,0,0,32,0,0
 [SelectMenu02&SelectMenu04]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portraits_Wily_32.png,1,0,0,32,0,0
+#}
+
+#{Robot Master Portraits Defeated
+[BombmanDefeated]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Bombman.png,1,0,0,33,0,0
+[CutmanDefeated]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Cutman.png,1,0,0,34,0,0
+[ElecmanDefeated]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Elecman.png,1,0,0,35,0,0
+[FiremanDefeated]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Fireman.png,1,0,0,36,0,0
+[GutsmanDefeated]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Gutsman.png,1,0,0,37,0,0
+[IcemanDefeated]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Iceman.png,1,0,0,38,0,0
+#}
+
+#{Stage Select Text
+[SelectMenu01&!SelectMenu04]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Text.png,1,0,0,02,0,0
+[SelectMenu03&!SelectMenu04]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Text.png,1,0,0,02,0,0
+[SelectMenu01&SelectMenu04]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Text_Wily.png,1,0,0,02,0,0
+[SelectMenu03&SelectMenu04]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Text_Wily.png,1,0,0,02,0,0
+
+#{Selected
+[BombmanTextSelected]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Text_Selected_Bombman.png,1,0,0,03,0,0
+[CutmanTextSelected]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Text_Selected_Cutman.png,1,0,0,03,0,0
+[ElecmanTextSelected]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Text_Selected_Elecman.png,1,0,0,03,0,0
+[FiremanTextSelected]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Text_Selected_Fireman.png,1,0,0,03,0,0
+[GutsmanTextSelected]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Text_Selected_Gutsman.png,1,0,0,03,0,0
+[IcemanTextSelected]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Text_Selected_Iceman.png,1,0,0,03,0,0
+[WilyTextSelected]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Text_Selected_Wily.png,1,0,0,03,0,0
+#}
+#}
+
+#{Stage Select/Selected Level BGs as Backdrop
+[BombmanStage&SelectMenu01]<background>MenuBackdrops\Menu_RM_Bombman.png,1,0,0,01,0,0
+[BombmanStage&SelectedMenu01&SelectedMenu02]<background>MenuBackdrops\Menu_RM_Bombman.png,1,0,0,01,0,0
+
+[CutmanStage&SelectMenu03]<background>MenuBackdrops\Menu_RM_Cutman.png,1,0,0,01,0,0
+[CutmanStage&SelectedMenu01&SelectedMenu02]<background>MenuBackdrops\Menu_RM_Cutman.png,1,0,0,01,0,0
+
+[ElecmanStage&SelectMenu03]<background>MenuBackdrops\Menu_RM_Elecman.png,1,0,0,01,0,0
+[ElecmanStage&SelectedMenu01&SelectedMenu02]<background>MenuBackdrops\Menu_RM_Elecman.png,1,0,0,01,0,0
+
+[FiremanStage&SelectMenu01]<background>MenuBackdrops\Menu_RM_Fireman.png,1,0,0,01,0,0
+[FiremanStage&SelectedMenu01&SelectedMenu02]<background>MenuBackdrops\Menu_RM_Fireman.png,1,0,0,01,0,0
+
+[GutsmanStage&SelectMenu03]<background>MenuBackdrops\Menu_RM_Gutsman.png,1,0,0,01,0,0
+[GutsmanStage&SelectedMenu01&SelectedMenu02]<background>MenuBackdrops\Menu_RM_Gutsman.png,1,0,0,01,0,0
+
+[IcemanStage&SelectMenu01]<background>MenuBackdrops\Menu_RM_Iceman.png,1,0,0,01,0,0
+[IcemanStage&SelectedMenu01&SelectedMenu02]<background>MenuBackdrops\Menu_RM_Iceman.png,1,0,0,01,0,0
+
+[WilyStage01&SelectMenu01]<background>MenuBackdrops\Menu_Wily_01.png,1,0,0,01,0,0
+[WilyStage01&SelectedMenu01&SelectedMenu02]<background>MenuBackdrops\Menu_Wily_01.png,1,0,0,01,0,0
+#}
+
+#{Stage Selected Screen
+[SelectedMenu01&SelectedMenu02&SelectedMenuAnim00]<background>MenuBackdrops\Menu_Stage_Selected_02_Frame00.png,1,0,0,02,0,0
+[SelectedMenu01&SelectedMenu02&SelectedMenuAnim01]<background>MenuBackdrops\Menu_Stage_Selected_02_Frame01.png,1,0,0,02,0,0
+[SelectedMenu01&SelectedMenu02&SelectedMenuAnim02]<background>MenuBackdrops\Menu_Stage_Selected_02_Frame02.png,1,0,0,02,0,0
+[SelectedMenu01&SelectedMenu02&SelectedMenuAnim03]<background>MenuBackdrops\Menu_Stage_Selected_02_Frame03.png,1,0,0,02,0,0
+[SelectedMenu01&SelectedMenu02&SelectedMenuAnim04]<background>MenuBackdrops\Menu_Stage_Selected_02_Frame04.png,1,0,0,02,0,0
+[SelectedMenu01&SelectedMenu02&SelectedMenuAnim05]<background>MenuBackdrops\Menu_Stage_Selected_02_Frame05.png,1,0,0,02,0,0
 
 ###Wily Selected
-[SelectedMenuWily01&SelectedMenuWily02]<background>MenuBackdrops\Menu_Stage_Selected_Wily_00.png,1,0,0,00,0,0
+[SelectedMenuWily01&SelectedMenuWily02]<background>MenuBackdrops\Menu_Stage_Selected_Wily_00.png,1,0,0,03,0,0
+#}
 
 [GameOverMenu01&GameOverMenu02]<background>MenuBackdrops\Menu_Game_Over_00.png,1,0,0,00,0,0
 #}
