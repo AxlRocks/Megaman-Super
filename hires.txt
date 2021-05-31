@@ -159,22 +159,27 @@
 
 #{Robot Masters Portraits Alive or Defeated
 <condition>CutmanAlive,tileAtPosition,80,32,FFFFFFFFFFFFFFFF0000000000000000,0F280F0F
-<condition>CutmanDefeated,tileAtPosition,80,32,00000000000000000000000000000000,0F283037
+<condition>CutmanDefeated01,tileAtPosition,80,32,00000000000000000000000000000000,0F283037
+<condition>CutmanDefeated02,tileAtPosition,80,32,00000000000000000000000000000000,0F280F0F
 
 <condition>GutsmanAlive,tileAtPosition,144,32,FFFFFFFFFFFFF0E0000000000000000E,0F281527
 <condition>GutsmanDefeated,tileAtPosition,144,32,FFFFFFFFFFFFF0E0000000000000000E,0F0F1527
 
 <condition>IcemanAlive,tileAtPosition,176,96,FFFFFFFFFFFFFFFF0000000000000000,0F280F0F
-<condition>IcemanDefeated,tileAtPosition,176,96,00000000000000000000000000000000,0F283037
+<condition>IcemanDefeated01,tileAtPosition,176,96,00000000000000000000000000000000,0F283037
+<condition>IcemanDefeated02,tileAtPosition,176,96,00000000000000000000000000000000,0F280F0F
 
 <condition>BombmanAlive,tileAtPosition,144,160,FFFFFFFFFFFFFFFF0000000000000000,0F280F0F
-<condition>BombmanDefeated,tileAtPosition,144,160,00000000000000000000000000000000,0F283037
+<condition>BombmanDefeated01,tileAtPosition,144,160,00000000000000000000000000000000,0F283037
+<condition>BombmanDefeated02,tileAtPosition,144,160,00000000000000000000000000000000,0F280F0F
 
 <condition>FiremanAlive,tileAtPosition,80,160,FFFFFFFFFFFFFFFF0000000000000000,0F280F0F
-<condition>FiremanDefeated,tileAtPosition,80,160,00000000000000000000000000000000,0F283037
+<condition>FiremanDefeated01,tileAtPosition,80,160,00000000000000000000000000000000,0F283037
+<condition>FiremanDefeated02,tileAtPosition,80,160,00000000000000000000000000000000,0F280F0F
 
 <condition>ElecmanAlive,tileAtPosition,48,96,FFFFFFFFFFFFFFFF0000000000000000,0F280F0F
-<condition>ElecmanDefeated,tileAtPosition,48,96,00000000000000000000000000000000,0F283037
+<condition>ElecmanDefeated01,tileAtPosition,48,96,00000000000000000000000000000000,0F283037
+<condition>ElecmanDefeated02,tileAtPosition,48,96,00000000000000000000000000000000,0F280F0F
 #}
 
 #{Stage Select Text Selected
@@ -596,12 +601,17 @@
 #}
 
 #{Robot Master Portraits Defeated
-[BombmanDefeated]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Bombman.png,1,0,0,33,0,0
-[CutmanDefeated]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Cutman.png,1,0,0,34,0,0
-[ElecmanDefeated]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Elecman.png,1,0,0,35,0,0
-[FiremanDefeated]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Fireman.png,1,0,0,36,0,0
+[BombmanDefeated01]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Bombman.png,1,0,0,33,0,0
+[BombmanDefeated02]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Bombman.png,1,0,0,33,0,0
+[CutmanDefeated01]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Cutman.png,1,0,0,34,0,0
+[CutmanDefeated02]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Cutman.png,1,0,0,34,0,0
+[ElecmanDefeated01]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Elecman.png,1,0,0,35,0,0
+[ElecmanDefeated02]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Elecman.png,1,0,0,35,0,0
+[FiremanDefeated01]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Fireman.png,1,0,0,36,0,0
+[FiremanDefeated02]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Fireman.png,1,0,0,36,0,0
 [GutsmanDefeated]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Gutsman.png,1,0,0,37,0,0
-[IcemanDefeated]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Iceman.png,1,0,0,38,0,0
+[IcemanDefeated01]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Iceman.png,1,0,0,38,0,0
+[IcemanDefeated02]<background>MenuBackdrops\Backdrop_Menu_Stage_Select_Portrait_Defeated_Iceman.png,1,0,0,38,0,0
 #}
 
 #{Stage Select Text
