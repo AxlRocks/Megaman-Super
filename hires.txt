@@ -2,6 +2,8 @@
 <scale>1
 <patch>Megaman - Super.ips,2F88381557339A14C20428455F6991C1EB902C99
 
+#Hires version: 2.1.4
+
 #{#=======BGM List=======#
 <bgm>0,1,BGM\MUS_WilyDefeated.ogg,772389
 <bgm>0,3,BGM\MUS_StageSelect.ogg,550806
