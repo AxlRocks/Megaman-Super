@@ -1,3 +1,5 @@
+Megaman/Mega Man/Rockman as a franchise and game is copyright Capcom. This project is entirely fan work and has no intention of claiming ownership of the franchise or game and has no original Capcom assets within it, only remixed, fan-made graphics.
+
 Megaman: Super (Previously known as 30th Anniversary Mesen 16-bit HD Pack)
 Author		:::		AxlRocks
 Version		:::		2.0
