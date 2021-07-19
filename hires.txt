@@ -1,6 +1,7 @@
 <ver>106
 <scale>1
 <patch>Megaman - Super.ips,2F88381557339A14C20428455F6991C1EB902C99
+<patch>Megaman - Super.ips,51A9FE7B5CB82833FC416E0F29B965495D9CE49A
 
 #Hires version: 2.1.4
 
